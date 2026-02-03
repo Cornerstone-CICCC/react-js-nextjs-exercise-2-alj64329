@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/components/Header.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1770145235898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1770146270717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n             href:\"/home\"\r\n         },\r\n         {\r\n             name:\"users\",\r\n-            href:\"/user\"\r\n+            href:\"/users\"\r\n         }\r\n     ]\r\n   return (\r\n     <header className='w-full p-8 flex justify-end bg-amber-500'>\r\n"
+                },
+                {
+                    "date": 1770146295088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n import Link from 'next/link'\r\n-import React from 'react'\r\n \r\n-type Props = {}\r\n-\r\n-const Header = (props: Props) => {\r\n+const Header = () => {\r\n     const menu=[\r\n         {\r\n             name:\"home\",\r\n             href:\"/home\"\r\n@@ -16,9 +13,9 @@\n     ]\r\n   return (\r\n     <header className='w-full p-8 flex justify-end bg-amber-500'>\r\n         <nav>\r\n-            <menu>\r\n+            <menu className='flex items-center gap-4'>\r\n                 {menu.map((item, i)=>(\r\n                     <li key={i}>\r\n                         <Link href={item.href}>{item.name.toUpperCase()}</Link>\r\n                     </li>\r\n"
+                },
+                {
+                    "date": 1770146317176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import Link from 'next/link'\r\n+\r\n+const Header = () => {\r\n+    const menu=[\r\n+        {\r\n+            name:\"home\",\r\n+            href:\"/home\"\r\n+        },\r\n+        {\r\n+            name:\"users\",\r\n+            href:\"/users\"\r\n+        }\r\n+    ]\r\n+  return (\r\n+    <header className='w-full p-8 flex justify-end bg-gray-400'>\r\n+        <nav>\r\n+            <menu className='flex items-center gap-4'>\r\n+                {menu.map((item, i)=>(\r\n+                    <li key={i}>\r\n+                        <Link href={item.href}>{item.name.toUpperCase()}</Link>\r\n+                    </li>\r\n+                ))}\r\n+            </menu>\r\n+        </nav>\r\n+\r\n+    </header>\r\n+  )\r\n+}\r\n+\r\n+export default Header\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770146961882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import Link from 'next/link'\r\n+\r\n+const Header = () => {\r\n+    const menu=[\r\n+        {\r\n+            name:\"home\",\r\n+            href:\"/\"\r\n+        },\r\n+        {\r\n+            name:\"users\",\r\n+            href:\"/users\"\r\n+        }\r\n+    ]\r\n+  return (\r\n+    <header className='w-full p-8 flex justify-end bg-gray-400'>\r\n+        <nav>\r\n+            <menu className='flex items-center gap-4'>\r\n+                {menu.map((item, i)=>(\r\n+                    <li key={i}>\r\n+                        <Link href={item.href}>{item.name.toUpperCase()}</Link>\r\n+                    </li>\r\n+                ))}\r\n+            </menu>\r\n+        </nav>\r\n+\r\n+    </header>\r\n+  )\r\n+}\r\n+\r\n+export default Header\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1770145235898,
+            "name": "Commit-0",
+            "content": "import Link from 'next/link'\r\nimport React from 'react'\r\n\r\ntype Props = {}\r\n\r\nconst Header = (props: Props) => {\r\n    const menu=[\r\n        {\r\n            name:\"home\",\r\n            href:\"/home\"\r\n        },\r\n        {\r\n            name:\"users\",\r\n            href:\"/user\"\r\n        }\r\n    ]\r\n  return (\r\n    <header className='w-full p-8 flex justify-end bg-amber-500'>\r\n        <nav>\r\n            <menu>\r\n                {menu.map((item, i)=>(\r\n                    <li key={i}>\r\n                        <Link href={item.href}>{item.name.toUpperCase()}</Link>\r\n                    </li>\r\n                ))}\r\n            </menu>\r\n        </nav>\r\n\r\n    </header>\r\n  )\r\n}\r\n\r\nexport default Header"
+        }
+    ]
+}

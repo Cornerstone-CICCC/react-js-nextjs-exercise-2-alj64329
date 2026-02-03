@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1770146196197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1770146196197,
+            "name": "Commit-0",
+            "content": "import Image from \"next/image\";\n\nexport default function Home() {\n  return (\n    <div>Home</div>\n  );\n}\n"
+        }
+    ]
+}
