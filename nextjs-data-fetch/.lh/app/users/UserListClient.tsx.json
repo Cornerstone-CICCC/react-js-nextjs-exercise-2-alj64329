@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/users/UserListClient.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1770139881498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1770139972435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+'use client'\r\n+import { useState } from 'react'\r\n+import { User } from './page'\r\n+\r\n+type Props = {\r\n+    users:User[]\r\n+}\r\n+\r\n+const UserListClient = ({users}: Props) => {\r\n+    const [isModalOpen, setIsModalOpen] = useState(false)\r\n+  return (\r\n+    <div>\r\n+        <ul>\r\n+        {users.map((u) => (\r\n+          <li key={u.id}\r\n+          onClick={()=>setIsModalOpen(true)}>\r\n+            {u.firstName}\r\n+          </li>\r\n+        ))}\r\n+      </ul>\r\n+      {isModalOpen}\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default UserListClient\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770141807169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n 'use client'\r\n import { useState } from 'react'\r\n import { User } from './page'\r\n+import Link from 'next/link'\r\n \r\n type Props = {\r\n     users:User[]\r\n }\r\n@@ -13,38 +14,15 @@\n         <ul>\r\n         {users.map((u) => (\r\n           <li key={u.id}\r\n           onClick={()=>setIsModalOpen(true)}>\r\n-            {u.firstName}\r\n+            <Link href={`/users/${id}`}>\r\n+            {u.firstName}</Link>\r\n           </li>\r\n         ))}\r\n       </ul>\r\n       {isModalOpen}\r\n     </div>\r\n   )\r\n }\r\n \r\n-export default UserListClient\n-'use client'\r\n-import { useState } from 'react'\r\n-import { User } from './page'\r\n-\r\n-type Props = {\r\n-    users:User[]\r\n-}\r\n-\r\n-const UserListClient = ({users}: Props) => {\r\n-    const [isModalOpen, setIsModalOpen] = useState(false)\r\n-  return (\r\n-    <div>\r\n-        <ul>\r\n-        {users.map((u) => (\r\n-          <li key={u.id}>\r\n-            {u.firstName}\r\n-          </li>\r\n-        ))}\r\n-      </ul>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default UserListClient\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770144947909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+\r\n+import { useState } from 'react'\r\n+import { User } from './page'\r\n+import Link from 'next/link'\r\n+\r\n+type Props = {\r\n+    users:User[]\r\n+}\r\n+\r\n+const UserListClient = ({users}: Props) => {\r\n+  return (\r\n+    <div>\r\n+        <ul>\r\n+        {users.map((u) => (\r\n+          <li key={u.id}\r\n+          >\r\n+            <Link href={`/users/${u.id}`}>\r\n+            {u.firstName}</Link>\r\n+          </li>\r\n+        ))}\r\n+      </ul>\r\n+\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default UserListClient\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1770139881498,
+            "name": "Commit-0",
+            "content": "'use client'\r\nimport { useState } from 'react'\r\nimport { User } from './page'\r\n\r\ntype Props = {\r\n    users:User[]\r\n}\r\n\r\nconst UserListClient = ({users}: Props) => {\r\n    const [isModalOpen, setIsModalOpen] = useState(false)\r\n  return (\r\n    <div>\r\n        <ul>\r\n        {users.map((u) => (\r\n          <li key={u.id}>\r\n            {u.firstName}\r\n          </li>\r\n        ))}\r\n      </ul>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default UserListClient"
+        }
+    ]
+}

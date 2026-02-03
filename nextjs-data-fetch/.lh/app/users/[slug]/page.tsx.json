@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/users/[slug]/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1770139640878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1770142061534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import { User } from \"../page\";\r\n+\r\n+\r\n+type Props = {\r\n+    params:Promise<{slug:string}>\r\n+}\r\n+\r\n+const page = async({params}: Props) => {\r\n+    const {slug} = await params\r\n+      let user: User;\r\n+\r\n+  try {\r\n+    const res = await fetch(`https://dummyjson.com/users/${slug}`)\r\n+    const data = await res.json()\r\n+    user = data\r\n+  } catch (err) {\r\n+    console.log(err)\r\n+    throw Error(\"Unable to show post\")\r\n+  }\r\n+  return (\r\n+    <div>\r\n+        <div>{user.firstName}</div>\r\n+        <div>{user.lastName}</div>\r\n+        <div>{user.age}</div>\r\n+        <div>{user.gender}</div>\r\n+        <div>{user.email}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default page\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770142084261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import { User } from \"../page\";\r\n+\r\n+\r\n+type Props = {\r\n+    params:Promise<{slug:string}>\r\n+}\r\n+\r\n+const page = async({params}: Props) => {\r\n+    const {slug} = await params\r\n+      let user: User;\r\n+\r\n+  try {\r\n+    const res = await fetch(`https://dummyjson.com/users/${slug}`)\r\n+    const data = await res.json()\r\n+    user = data\r\n+  } catch (err) {\r\n+    console.log(err)\r\n+    throw Error(\"Unable to show post\")\r\n+  }\r\n+  return (\r\n+    <div>\r\n+        <h1>User Detail</h1>\r\n+        <div>{user.firstName}</div>\r\n+        <div>{user.lastName}</div>\r\n+        <div>{user.age}</div>\r\n+        <div>{user.gender}</div>\r\n+        <div>{user.email}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default page\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770147040411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import { User } from \"../page\";\r\n+\r\n+\r\n+type Props = {\r\n+    params:Promise<{slug:string}>\r\n+}\r\n+\r\n+const page = async({params}: Props) => {\r\n+    const {slug} = await params\r\n+      let user: User;\r\n+\r\n+  try {\r\n+    const res = await fetch(`https://dummyjson.com/users/${slug}`)\r\n+    const data = await res.json()\r\n+    user = data\r\n+  } catch (err) {\r\n+    console.log(err)\r\n+    throw Error(\"Unable to show post\")\r\n+  }\r\n+  return (\r\n+    <div\r\n+    className=\"p-8\">\r\n+        <h1>User Detail</h1>\r\n+        <div>{user.firstName}</div>\r\n+        <div>{user.lastName}</div>\r\n+        <div>{user.age}</div>\r\n+        <div>{user.gender}</div>\r\n+        <div>{user.email}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default page\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770147051713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,34 @@\n+import { User } from \"../page\";\r\n+\r\n+\r\n+type Props = {\r\n+    params:Promise<{slug:string}>\r\n+}\r\n+\r\n+const page = async({params}: Props) => {\r\n+    const {slug} = await params\r\n+      let user: User;\r\n+\r\n+  try {\r\n+    const res = await fetch(`https://dummyjson.com/users/${slug}`)\r\n+    const data = await res.json()\r\n+    user = data\r\n+  } catch (err) {\r\n+    console.log(err)\r\n+    throw Error(\"Unable to show post\")\r\n+  }\r\n+  return (\r\n+    <div\r\n+    className=\"p-8\">\r\n+        <h1\r\n+        className=\"py-4\">User Detail</h1>\r\n+        <div>{user.firstName}</div>\r\n+        <div>{user.lastName}</div>\r\n+        <div>{user.age}</div>\r\n+        <div>{user.gender}</div>\r\n+        <div>{user.email}</div>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default page\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1770139640878,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\ntype Props = {}\r\n\r\nconst page = (props: Props) => {\r\n  return (\r\n    <div>page</div>\r\n  )\r\n}\r\n\r\nexport default page"
+        }
+    ]
+}
